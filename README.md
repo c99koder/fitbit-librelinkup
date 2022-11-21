@@ -16,7 +16,7 @@
 
 # Fitbit-LibreLinkUp
 
-Display latest glucose reading from Freestyle LibreLinkUp on a Fitbit OS 5.0 device (Sense, Versa 3)
+Display latest glucose reading from Freestyle Libre sensors via LibreLinkUp on a Fitbit OS 5.0 device (Sense, Versa 3)
 
 ![Screenshot](screenshot.png)
 
@@ -37,6 +37,8 @@ fitbit$ install
 For more information on how to use the Fitbit developer bridge, see Fitbit's documentation: [https://dev.fitbit.com/getting-started/](https://dev.fitbit.com/getting-started/)
 
 ## Usage
+
+Open the Freestyle Libre app and tap "Connected Apps" from the menu, then send yourself an invitation to view your data via LibreLinkUp.  Install the LibreLinkUp app on your phone, login, and accept the invitation.
 
 Launch the Fitbit app on your phone and open the settings page for this app. Enter your Freestyle LibreLinkUp email address and password, then tap the login button.
 
