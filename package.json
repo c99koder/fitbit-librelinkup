@@ -1,0 +1,31 @@
+{
+  "name": "fitbit-librelinkup",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@fitbit/sdk": "~6.1.0",
+    "@fitbit/sdk-cli": "^1.7.3",
+    "fitbit-sdk-types": "^8.0.3"
+  },
+  "fitbit": {
+    "appUUID": "ad5e4732-726f-485d-a333-81294c344444",
+    "appType": "app",
+    "appDisplayName": "Glucose",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ff0000",
+    "requestedPermissions": [
+      "access_internet"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  }
+}

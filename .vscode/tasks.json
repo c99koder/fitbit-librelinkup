@@ -1,0 +1,68 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "typescript",
+			"tsconfig": "app/tsconfig.json",
+			"label": "TS app",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"hide": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"isBackground": true,
+			"presentation": {
+				"echo": false,
+				"reveal": "never",
+				"panel": "shared",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "companion/tsconfig.json",
+			"label": "TS companion",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"hide": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"isBackground": true,
+			"presentation": {
+				"echo": false,
+				"reveal": "never",
+				"panel": "shared",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"type": "typescript",
+			"tsconfig": "settings/tsconfig.json",
+			"label": "TS settings",
+			"option": "watch",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"group": "build",
+			"hide": true,
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"isBackground": true,
+			"presentation": {
+				"echo": false,
+				"reveal": "never",
+				"panel": "shared",
+				"showReuseMessage": false
+			}
+		}
+	]
+}
