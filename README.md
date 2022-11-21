@@ -29,6 +29,7 @@ npm add @fitbit/sdk-cli
 npx fitbit-build generate-appid
 npx fitbit-build
 npx fitbit
+fitbit$ connect phone
 fitbit$ install
 ```
 
