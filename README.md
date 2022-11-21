@@ -21,7 +21,8 @@ Display latest glucose reading from Freestyle LibreLinkUp on a Fitbit OS 5.0 dev
 ![Screenshot](screenshot.png)
 
 ## Install
-Using Fitbit developer bridge:
+
+Connect your phone and your watch to the Fitbit developer bridge, then execute the following shell commands to build and side-load the app:
 
 ```shell
 npm add @fitbit/sdk
@@ -32,6 +33,8 @@ npx fitbit
 fitbit$ connect phone
 fitbit$ install
 ```
+
+For more information on how to use the Fitbit developer bridge, see Fitbit's documentation: [https://dev.fitbit.com/getting-started/](https://dev.fitbit.com/getting-started/)
 
 ## Usage
 
