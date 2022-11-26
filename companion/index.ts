@@ -90,7 +90,7 @@ function fetchGlucose() {
                     messaging.peerSocket.send(json.data[0].glucoseMeasurement);
                 }
             } else {
-                if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
+                if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN && settingsStorage.getItem("glucose") == null) {
                     messaging.peerSocket.send({error: "Failed to fetch glucose data"});
                 }
             }
