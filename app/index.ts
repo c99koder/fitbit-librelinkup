@@ -63,7 +63,7 @@ messaging.peerSocket.addEventListener("message", (evt) => {
             case 4:
                 backgroundRect.style.fill = "red";
                 break;
-                default:
+            default:
                 backgroundRect.style.fill = "grey";
                 break;
         }
