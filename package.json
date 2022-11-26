@@ -15,7 +15,8 @@
     "iconFile": "resources/icon.png",
     "wipeColor": "#ff0000",
     "requestedPermissions": [
-      "access_internet"
+      "access_internet",
+      "run_background"
     ],
     "buildTargets": [
       "atlas",

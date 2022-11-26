@@ -14,6 +14,7 @@
 
 import * as messaging from "messaging";
 import { settingsStorage } from "settings";
+import { me as companion } from 'companion';
 
 const LIBRELINKUP_URL = 'https://api-us.libreview.io'
 const LIBRELINKUP_VERSION = '4.2.2'
@@ -21,6 +22,14 @@ const LIBRELINKUP_PRODUCT = 'llu.ios'
 const LIBRELINKUP_HEADERS = {"Content-Type": "application/json", version: LIBRELINKUP_VERSION, product: LIBRELINKUP_PRODUCT}
 
 var LIBRELINKUP_TOKEN = settingsStorage.getItem("token");
+
+if (companion.permissions.granted("run_background")) {
+    companion.wakeInterval = 15 * 1000 * 60;
+
+    companion.addEventListener("wakeinterval", (evt) => {
+        fetchGlucose();
+    });
+}
 
 if (settingsStorage.getItem("loginStatus") == null)
     settingsStorage.setItem("loginStatus", "Enter your credentials and tap the login button to continue.");
@@ -48,6 +57,9 @@ settingsStorage.addEventListener("change", (evt) => {
 });
 
 messaging.peerSocket.addEventListener("open", (evt) => {
+    if(settingsStorage.getItem("glucose") != null) {
+        messaging.peerSocket.send(JSON.parse(settingsStorage.getItem("glucose")));
+    }
     fetchGlucose();
 });
 
@@ -73,7 +85,7 @@ function fetchGlucose() {
         }).then(function(json) {
             if ("data" in json && json.data.length > 0) {
                 settingsStorage.setItem("loginStatus", `Logged in as ${json.data[0].firstName} ${json.data[0].lastName}. Sensor SN: ${json.data[0].sensor.sn}`);
-
+                settingsStorage.setItem("glucose", JSON.stringify(json.data[0].glucoseMeasurement));
                 if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
                     messaging.peerSocket.send(json.data[0].glucoseMeasurement);
                 }
