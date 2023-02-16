@@ -13,22 +13,21 @@
 // limitations under the License.
 
 <svg>
-  <rect id="background" fill="black"/>
   <textarea x="25" y="50%" id="error" width="100%-50"
     font-family="System-Regular" fill="white" text-length="100"
     font-size="22" font-weight="light" 
     text-anchor="middle">Loading</textarea>
-  <image x="50%+28" y="50%-38" width="48" height="48" id="arrow"/>
-  <text x="50%+28" y="50%+24" id="glucose" width="50%" text-length="4"
-    font-family="System-Regular" fill="black"
+  <image x="50%+38" y="50%-38" width="48" height="48" id="arrow" fill="white" opacity="1"/>
+  <text x="50%+38" y="50%+24" id="glucose" width="50%" text-length="4"
+    font-family="System-Regular" fill="white"
     font-size="82" font-weight="bold"
     text-anchor="end"/>
-  <text x="50%+28" y="50%+24" id="units" width="50%" text-length="8"
-      font-family="System-Regular" fill="black"
+  <text x="50%+38" y="50%+24" id="units" width="50%" text-length="8"
+      font-family="System-Regular" fill="white"
       font-size="24" font-weight="regular"
       text-anchor="start"/>
   <textarea x="25" y="100%-60" id="timestamp" width="100%-50"
-    font-family="System-Regular" fill="black" text-length="100"
+    font-family="System-Regular" fill="white" text-length="100"
     font-size="18" font-weight="light" 
     text-anchor="middle"/>
 </svg>

@@ -15,7 +15,6 @@
 import document from "document";
 import * as messaging from "messaging";
 
-const backgroundRect = document.getElementById("background") as RectElement;
 const arrowImg = document.getElementById("arrow") as ImageElement;
 const glucoseText = document.getElementById("glucose") as TextElement;
 const unitsText = document.getElementById("units") as TextElement;
@@ -32,7 +31,6 @@ function fetchGlucose() {
 
 messaging.peerSocket.addEventListener("message", (evt) => {
     if (evt.data && "error" in evt.data) {
-        backgroundRect.style.fill = "black";
         errorText.text = evt.data.error;
         glucoseText.text = "";
         timestampText.text = "";
@@ -52,19 +50,29 @@ messaging.peerSocket.addEventListener("message", (evt) => {
         }
         switch(evt.data.MeasurementColor) {
             case 1:
-                backgroundRect.style.fill = "green";
+                glucoseText.style.fill = "green";
+                unitsText.style.fill = "green";
+                arrowImg.style.fill = "green";
                 break;
             case 2:
-                backgroundRect.style.fill = "yellow";
+                glucoseText.style.fill = "yellow";
+                unitsText.style.fill = "yellow";
+                arrowImg.style.fill = "yellow";
                 break;
             case 3:
-                backgroundRect.style.fill = "orange";
+                glucoseText.style.fill = "orange";
+                unitsText.style.fill = "orange";
+                arrowImg.style.fill = "orange";
                 break;
             case 4:
-                backgroundRect.style.fill = "red";
+                glucoseText.style.fill = "red";
+                unitsText.style.fill = "red";
+                arrowImg.style.fill = "red";
                 break;
             default:
-                backgroundRect.style.fill = "grey";
+                glucoseText.style.fill = "grey";
+                unitsText.style.fill = "grey";
+                arrowImg.style.fill = "grey";
                 break;
         }
         switch(evt.data.TrendArrow) {
