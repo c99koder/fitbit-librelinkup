@@ -50,9 +50,9 @@ messaging.peerSocket.addEventListener("message", (evt) => {
         }
         switch(evt.data.MeasurementColor) {
             case 1:
-                glucoseText.style.fill = "green";
-                unitsText.style.fill = "green";
-                arrowImg.style.fill = "green";
+                glucoseText.style.fill = "lime";
+                unitsText.style.fill = "lime";
+                arrowImg.style.fill = "lime";
                 break;
             case 2:
                 glucoseText.style.fill = "yellow";
