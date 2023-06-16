@@ -17,7 +17,7 @@ import { settingsStorage } from "settings";
 import { me as companion } from 'companion';
 
 const LIBRELINKUP_URL = 'https://api-us.libreview.io'
-const LIBRELINKUP_VERSION = '4.2.2'
+const LIBRELINKUP_VERSION = '4.7.0'
 const LIBRELINKUP_PRODUCT = 'llu.ios'
 const LIBRELINKUP_HEADERS = {"Content-Type": "application/json", version: LIBRELINKUP_VERSION, product: LIBRELINKUP_PRODUCT}
 
